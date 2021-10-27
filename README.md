@@ -1,0 +1,1 @@
+This is a typical example of PHP use for CRUD
