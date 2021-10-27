@@ -73,7 +73,7 @@ function deleteRows() {
         if(!$result) {
             die("QUERY FAILED" . mysqli_error($connection));
         } else {
-            echo "User deleted!";
+            echo "Record deleted!";
         }
     }
 
