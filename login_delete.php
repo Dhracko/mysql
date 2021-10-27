@@ -3,7 +3,7 @@
 
 <?php
 if (isset($_POST['submit'])) {
-    UpdateTable();
+    deleteRows();
 }
 
 ?>
@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     <div class="container">
         <!-- <div class="row"> -->
         <div class="col-sm-6">
-            <form action="login_update.php" method="POST">
+            <form action="login_delete.php" method="POST">
                 <div class="form-group">
                     <label class="form-label" for="username">Username</label>
                     <input type="text" name="username" class="form-control">
@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
 
                 </div>
                 <br>
-                <input class="btn btn-primary" type="submit" name="submit" value="Update">
+                <input class="btn btn-primary" type="submit" name="submit" value="Delete">
 
             </form>
         </div>
