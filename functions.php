@@ -53,22 +53,26 @@ function showAllData() {
     $result = mysqli_query($connection, $query);
     if(!$result) {
         die("QUERY FAILED" . mysqli_error($connection));
+    } else {
+        echo "Record Updated";
     }
 
 }
 
 function deleteRows() {
-    global $connection;
-    $id = $_POST['id'];
+    if(isset($_POST['submit'])) {
+        global $connection;
+        $id = $_POST['id'];
 
-    $query = "DELETE FROM users ";
-    $query .= "WHERE id = $id ";
+        $query = "DELETE FROM users ";
+        $query .= "WHERE id = $id ";
 
-    $result = mysqli_query($connection, $query);
-    if(!$result) {
-        die("QUERY FAILED" . mysqli_error($connection));
-    } else {
-        echo "User deleted!";
+        $result = mysqli_query($connection, $query);
+        if(!$result) {
+            die("QUERY FAILED" . mysqli_error($connection));
+        } else {
+            echo "User deleted!";
+        }
     }
 
 }
