@@ -13,7 +13,7 @@ function createRows()
 
         $result = mysqli_query($connection, $query);
         if (!$result) {
-            die('Query FAILED' . mysqli_error());
+            die('Query FAILED' . mysqli_error($connection));
         } else {
             echo "Record Created";
         }
@@ -27,7 +27,7 @@ function readRows()
     $result = mysqli_query($connection, $query);
 
     if (!$result) {
-        die('Query FAILED' . mysqli_error());
+        die('Query FAILED' . mysqli_error($connection));
     }
     while ($row = mysqli_fetch_assoc($result)) {
         print_r($row);
@@ -41,7 +41,7 @@ function showAllData()
     $query = "SELECT * FROM users ";
     $result = mysqli_query($connection, $query);
     if (!$result) {
-        die('Query FAILED' . mysqli_error());
+        die('Query FAILED' . mysqli_error($connection));
     }
 
 
