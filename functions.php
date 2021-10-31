@@ -10,6 +10,11 @@ function createRows()
         $username = mysqli_real_escape_string($connection,$username); //Added Security
         $password = mysqli_real_escape_string($connection, $password); //cleans the code of special caracters
 
+        //Add Security using $2y$10$ more info at https://www.php.net/manual/en/function.crypt.php
+        $hashFormat = "$2y$10$";
+        $salt = "iusesomecrazystrings22";
+        $hashF_and_salt = $hashFormat . $salt;
+        $password = crypt($password, $hashF_and_salt);
 
         $query = "INSERT INTO users(username, password) ";
         $query .= "VALUES ('$username', '$password')";
