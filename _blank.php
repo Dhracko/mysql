@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,4 +7,10 @@
 <body>
 
 </body>
-</html>
+</html> -->
+
+<?php include "includes/header.php" ?>
+
+
+
+<?php include "includes/footer.php" ?>
