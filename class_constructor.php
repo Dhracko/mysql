@@ -10,7 +10,7 @@ class Car
     var $engine = 1;
     var $doors = 4;
 
-    function __construct(){
+    function __construct(){ //execute every time you create a new instance
 
        echo $this->wheels = 10; // $Car->wheels = 10;
     }
